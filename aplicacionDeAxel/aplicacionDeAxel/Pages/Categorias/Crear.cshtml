@@ -1,0 +1,37 @@
+﻿@page
+@model aplicacionDeAxel.Pages.Categorias.CrearModel
+@{
+    ViewData["Title"] = "Crear una Categoria";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8 offset-2">
+
+            <form method="POST">
+
+                 <div class="mb-3">
+                    <label asp-for="Categoria.NombreCategoria" class="form-label"></label>
+                    <input asp-for="Categoria.NombreCategoria" class="form-control" placeholder="Ejemplo: Amigos"/>
+                    <span asp-validation-for="Categoria.NombreCategoria" class="text-danger"></span>
+                 </div>
+
+                 <button type="submit" class="btn btn-primary"> Crear categoria</button>
+
+
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
+            <a asp-page="Index" class="btn btn-success">Volver</a>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}
+
